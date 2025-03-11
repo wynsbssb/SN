@@ -30,7 +30,7 @@ about:AddParagraph("您当前服务器的ID"," "..game.GameId.."")
 
 OrionLib:MakeNotification({
 	Name = "SN脚本",
-	Content = "欢迎使用雪脚本",
+	Content = "欢迎使用SN脚本",
 	Image = "rbxassetid://4483345998",
 	Time = 2
 
@@ -304,11 +304,219 @@ local Tab = Window:MakeTab({
 
 })
 
+
+
+
+
+
 Tab:AddButton({
     Name = "Alpha",
     Callback = function()
         local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
-        local location = CFrame.new(-446.5848693847656, 67.15837860107422, -4655.828125)
+        local location = CFrame.new(-1196.69946, 58.9945717, -4790.21436, 0.965929627, 0, 0.258804798, 0, 1, 0, -0.258804798, 0, 0.965929627)
+        local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+        Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        wait(0.2)
+        pl.CFrame = location
+    end
+})
+
+Tab:AddButton({
+    Name = "Bravo",
+    Callback = function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local location = CFrame.new(-219.982513, 58.9945717, -4918.90283, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+        Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        wait(0.2)
+        pl.CFrame = location
+    end
+})
+Tab:AddButton({
+    Name = "Charlie",
+    Callback = function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local location = CFrame.new(797.080017, 58.9949989, -4739.56885, 0.965929627, -0, -0.258804798, 0, 1, -0, 0.258804798, 0, 0.965929627)
+        local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+        Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        wait(0.2)
+        pl.CFrame = location
+    end
+})
+
+Tab:AddButton({
+    Name = "Delta",
+    Callback = function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local location = CFrame.new(2044.15405, 58.9949989, -3983.7439, 0.707134247, -0, -0.707079291, 0, 1, -0, 0.707079291, 0, 0.707134247)
+        local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+        Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        wait(0.2)
+        pl.CFrame = location
+    end
+})
+
+Tab:AddButton({
+    Name = "Echo",
+    Callback = function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local location = CFrame.new(2741.61499, 58.9949989, -3030.81299, 0.422592998, -0, -0.906319618, 0, 1, -0, 0.906319618, 0, 0.422592998)
+        local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+        Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        wait(0.2)
+        pl.CFrame = location
+    end
+})
+
+Tab:AddButton({
+    Name = "Foxtrot",
+    Callback = function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local location = CFrame.new(3045.17603, 58.9949989, -1788.42102, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+        local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+        Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        wait(0.2)
+        pl.CFrame = location
+    end
+})
+
+Tab:AddButton({
+    Name = "Golf",
+    Callback = function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local location = CFrame.new(3376.27588, 58.9949989, -562.419983, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+        local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+        Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        wait(0.2)
+        pl.CFrame = location
+    end
+})
+
+Tab:AddButton({
+    Name = "Hotel",
+    Callback = function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local location = CFrame.new(3289.84106, 58.9949989, 586.625977, -0.173624277, 0, -0.984811902, 0, 1, 0, 0.984811902, 0, -0.173624277)
+        local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+        Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        wait(0.2)
+        pl.CFrame = location
+    end
+})
+
+Tab:AddButton({
+    Name = "Juliet",
+    Callback = function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local location = CFrame.new(2955.00488, 58.9949989, 1803.89294, -0.258864403, 0, -0.965913713, 0, 1, 0, 0.965913713, 0, -0.258864403)
+        local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+        Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        wait(0.2)
+        pl.CFrame = location
+    end
+})
+
+Tab:AddButton({
+    Name = "Kilo",
+    Callback = function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local location = CFrame.new(2569.34302, 58.9949989, 2925.82495, -0.499959469, 0, -0.866048813, 0, 1, 0, 0.866048813, 0, -0.499959469)
+        local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+        Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        wait(0.2)
+        pl.CFrame = location
+    end
+})
+
+Tab:AddButton({
+    Name = "Lima",
+    Callback = function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local location = CFrame.new(988.705994, 58.9949989, 3418.80396, -0.342042685, 0, -0.939684391, 0, 1, 0, 0.939684391, 0, -0.342042685)
+        local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+        Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        wait(0.2)
+        pl.CFrame = location
+    end
+})
+
+Tab:AddButton({
+    Name = "Omega",
+    Callback = function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local location = CFrame.new(-319.369995, 58.9949989, 3932.35303, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+        local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+        Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        wait(0.2)
+        pl.CFrame = location
+    end
+})
+
+Tab:AddButton({
+    Name = "Romeo",
+    Callback = function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local location = CFrame.new(-1479.495, 58.9949989, 3721.99902, -0.906296611, 0, 0.422642082, 0, 1, 0, -0.422642082, 0, -0.906296611)
+        local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+        Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        wait(0.2)
+        pl.CFrame = location
+    end
+})
+
+Tab:AddButton({
+    Name = "Sierra",
+    Callback = function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local location = CFrame.new(-2527.83594, 58.9949989, 2549.146, -0.707134247, 0, 0.707079291, 0, 1, 0, -0.707079291, 0, -0.707134247)
+        local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+        Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        wait(0.2)
+        pl.CFrame = location
+    end
+})
+
+Tab:AddButton({
+    Name = "Tango",
+    Callback = function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local location = CFrame.new(-3018.21509, 58.9949989, 1502.59998, -0.573599219, 0, 0.81913656, 0, 1, 0, -0.81913656, 0, -0.573599219)
+        local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+        Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        wait(0.2)
+        pl.CFrame = location
+    end
+})
+
+Tab:AddButton({
+    Name = "Victor",
+    Callback = function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local location = CFrame.new(-3586.59912, 58.9949989, 633.554993, -0.499959469, 0, 0.866048813, 0, 1, 0, -0.866048813, 0, -0.499959469)
+        local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+        Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        wait(0.2)
+        pl.CFrame = location
+    end
+})
+
+Tab:AddButton({
+    Name = "Yankee",
+    Callback = function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local location = CFrame.new(-3957.39551, 59.1445694, -286.527435, -0.258864403, 0, 0.965913713, 0, 1, 0, -0.965913713, 0, -0.258864403)
+        local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+        Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        wait(0.2)
+        pl.CFrame = location
+    end
+})
+
+Tab:AddButton({
+    Name = "Zulu",
+    Callback = function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local location = CFrame.new(-4049.12012, 59.1445694, -1334.10547, 0, 0, 1, 0, 1, -0, -1, 0, 0)
         local Humanoid = game.Players.LocalPlayer.Character.Humanoid
         Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
         wait(0.2)
