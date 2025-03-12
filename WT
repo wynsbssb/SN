@@ -294,6 +294,66 @@ Tab:AddButton({
     end
 })
 
+
+Tab:AddButton({
+    Name = "RPG无限子弹",
+    Callback=function()
+
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/wynsbssb/SN/main/RPG'))()
+
+end
+})
+
+Tab:AddButton({
+    Name = "枪无限子弹(开一枪执行)",
+    Callback=function()
+
+	-- 连接到游戏数据存储位置
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+-- 定位到枪支配置总目录
+local gunsFolder = ReplicatedStorage.Configurations.ACS_Guns
+
+-- 遍历所有枪支类型
+for _, gunType in ipairs(gunsFolder:GetChildren()) do
+    -- 在每种枪支类型中找到设置模块
+    local settingsModule = gunType:FindFirstChild("Settings")
+    if settingsModule then
+        -- 加载枪支配置表
+        local gunConfig = require(settingsModule)
+        
+        -- 以下修改和之前类似，修改数值部分 --
+        gunConfig.Bullets = 1
+        gunConfig.Ammo = 1e2000
+        gunConfig.FireRate = 1e1000
+        gunConfig.Mode = "Auto"
+        gunConfig.FireModes = {
+                Auto = true,
+                Semi = false,
+                Burst = false
+            }
+        gunConfig.DamageMultiplier = 1e9999
+        gunConfig.Distance = 1e9999
+        gunConfig.VRecoil = {0, 0}
+        gunConfig.HRecoil = {0, 0}
+        gunConfig.RecoilPunch = 0
+        gunConfig.VPunchBase = 0
+        gunConfig.HPunchBase = 0
+        gunConfig.DPunchBase = 0
+        gunConfig.MinRecoilPower = 0
+        gunConfig.MaxRecoilPower = 0
+        gunConfig.BSpeed = 1e18
+        gunConfig.BDrop = 0
+        gunConfig.MinSpread = 0
+        gunConfig.MaxSpread = 0
+
+    end
+end
+
+end
+
+})
+
+
 local Tab = Window:MakeTab({
 
     Name = "基地传送",
@@ -303,6 +363,7 @@ local Tab = Window:MakeTab({
     PremiumOnly = false
 
 })
+
 
 
 
