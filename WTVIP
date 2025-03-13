@@ -261,6 +261,26 @@ local Tab = Window:MakeTab({
 
 })
 
+
+Tab:AddButton({
+    Name = "剑客v7",
+    Callback=function()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Zer0neK/Hello/refs/heads/main/SG-V7"))()
+end
+})
+
+Tab:AddButton({
+    Name = "炸服脚本(机翻)",
+    Callback=function()
+
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/wynsbssb/SN/main/zhafu"))
+end
+
+})
+
+
+
 Tab:AddButton({
     Name = "删除所有门",
     Callback = function()
