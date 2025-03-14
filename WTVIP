@@ -326,7 +326,7 @@ end
 })
 
 Tab:AddButton({
-    Name = "天基炮",
+    Name = "天基炮(只有第一枪有伤害)",
     Callback=function()
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local configurations = ReplicatedStorage:FindFirstChild("Configurations")
