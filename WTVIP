@@ -326,6 +326,64 @@ end
 })
 
 Tab:AddButton({
+    Name = "天基炮",
+    Callback=function()
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local configurations = ReplicatedStorage:FindFirstChild("Configurations")
+local acsGuns = configurations and configurations:FindFirstChild("ACS_Guns")
+
+if acsGuns then
+    for _, gunFolder in ipairs(acsGuns:GetChildren()) do
+        -- 仅处理文件夹类型
+        if gunFolder:IsA("Folder") then
+            local settingsModule = gunFolder:FindFirstChild("Settings")
+            if settingsModule and settingsModule:IsA("ModuleScript") then
+                local success, gunConfig = pcall(require, settingsModule)
+                if success then
+                    -- 霰弹效果
+                    gunConfig.Bullets = 1000
+                    gunConfig.MinSpread = 999
+                    gunConfig.MaxSpread = 15
+
+                    -- 基础属性
+                    gunConfig.Ammo = 5000000
+                    gunConfig.Mode = "Auto"
+                    gunConfig.FireModes = {["Auto"] = flash}
+                    gunConfig.FireRate = 500   -- 单位：RPM（实际射速需验证）
+                    gunConfig.DamageMultiplier = 5
+                    gunConfig.Distance = 1000  -- 单位：STU
+
+
+                    -- 弹道参数
+                    gunConfig.BSpeed = 100000000
+                    gunConfig.BDrop = 0
+
+                    -- 后坐力清零
+                    gunConfig.VRecoil = {0, 0}
+                    gunConfig.HRecoil = {0, 0}
+                    gunConfig.RecoilPunch = 0
+                    gunConfig.VPunchBase = 0
+                    gunConfig.HPunchBase = 0
+                    gunConfig.DPunchBase = 0
+                    gunConfig.MinRecoilPower = 0
+                    gunConfig.MaxRecoilPower = 0
+                    gunConfig.BSpeed = 100000000
+                    gunConfig.BDrop = 0
+                    -- ...其他后坐力参数归零...
+                else
+                    warn("无法加载模块:", gunFolder.Name, gunConfig)
+                end
+            end
+        end
+    end
+else
+    warn("未找到 ACS_Guns 配置目录")
+end
+end
+
+})
+
+Tab:AddButton({
     Name = "枪无限子弹(开一枪执行)",
     Callback=function()
 
